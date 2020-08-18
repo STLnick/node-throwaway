@@ -1,0 +1,54 @@
+.container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  width: 100vw;
+}
+
+form {
+  align-items: center;
+  border: 2px solid purple;
+  border-radius: 5px;
+  color: purple;
+  display: flex;
+  flex-direction: column;
+  height: 45%;
+  justify-content: space-around;
+  padding: 1rem;
+}
+
+button,
+input {
+  border: 1px solid plum;
+  border-radius: 5px;
+  outline: none;
+  padding: 0.5rem;
+  transition: box-shadow 0.4s;
+}
+
+button:focus,
+button:hover,
+input:focus,
+input:hover {
+  box-shadow: 0 0 3px 3px plum;
+}
+
+button {
+  background: white;
+  color: purple;
+  transition: all 0.4s;
+}
+
+button:focus,
+button:hover {
+  background: plum;
+  color: white;
+}
+
+.screen-reader-text {
+  left: -99999px;
+  position: absolute;
+  top: -99999px;
+}

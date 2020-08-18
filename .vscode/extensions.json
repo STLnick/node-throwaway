@@ -1,13 +1,11 @@
 // 20191115225449
 // https://gist.githubusercontent.com/manavm1990/5ac9cb4d3ee08bf964bd67312dc9f2b6/raw/0e78d4ed1ce018762e11397c0830ff97640ba71f/extensions.json
-
 {
   "recommendations": [
     "2gua.rainbow-brackets",
     "aaron-bond.better-comments",
     "asvetliakov.snapshot-tools",
     "capaj.vscode-standardjs-snippets",
-    "chenxsan.vscode-standardjs",
     "christian-kohler.npm-intellisense",
     "codezombiech.gitignore",
     "coenraads.bracket-pair-colorizer-2",

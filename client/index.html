@@ -1,20 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.7.0/modern-normalize.min.css">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- TODO: Add some Google Fonts -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.7.0/modern-normalize.min.css">
 
-    <link rel="stylesheet" href="style.css">
+  <!-- TODO: Add some Google Fonts -->
 
-    <!-- TODO: Update '<title>'. -->
-    <title>Document</title>
-  </head>
-  <body>
-    <!-- 'Connect' JS to this HTML file. -->
-    <script src="./scripts.js"></script>
-  </body>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- TODO: Update '<title>'. -->
+  <title>Form</title>
+</head>
+
+<body>
+  <div class="container">
+    <form>
+      <div>
+        <label class="screen-reader-text" for="name">Name</label>
+        <input type="text" placeholder="Ur Name" id="name" data-form="name">
+      </div>
+
+      <div>
+        <label class="screen-reader-text" for="email">✉️</label>
+        <input type="email" placeholder="✉️" id="email" data-form="email">
+      </div>
+
+      <div>
+        <label class="screen-reader-text" for="fone">☎️</label>
+        <input type="tel" id="fone" placeholder="☎️" data-form="fone">
+      </div>
+
+      <div>
+        <label class="screen-reader-text" for="msg">Ur Message</label>
+        <textarea id="msg" placeholder="💬" data-form="msg"></textarea>
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <!-- 'Connect' JS to this HTML file. -->
+  <script src="./scripts.js"></script>
+</body>
+
 </html>
