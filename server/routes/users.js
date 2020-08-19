@@ -1,28 +1,30 @@
 import express from 'express';
+import {
+  addNewUser, deleteUser, getUser, getAllUsers, updateUser,
+} from '../db';
 
 const router = express.Router();
 
-router.get('/', (_, res) => {
-  res.send('<h1>Testing Users GET</h1>');
+router.get('/', async (_, res) => {
+  res.status(200);
+  res.send(await getAllUsers());
 });
 
-router.post('/add', (req, res) => {
-  console.log(req.body);
+router.post('/add', async (req, res) => {
   res.status(201);
-  res.send('<h1>Testing Users POST</h1>');
-  // res.json(JSON.stringify({ status: 201, message: 'Received POST req' }));
+  res.json(await addNewUser(req.body));
 });
 
-router.put('/update', (req, res) => {
+// TODO: Pass in correct parameter for updateUser
+router.put('/update', async (req, res) => {
   res.status(204);
-  res.send('<h1>Testing Users PUT</h1>');
-  res.json(JSON.stringify({ status: 204, message: 'Received PUT req' }));
+  res.json(await updateUser());
 });
 
-router.delete('/delete', (req, res) => {
+router.delete('/delete', async (req, res) => {
   res.status(204);
-  res.send('<h1>Testing Users DELETE</h1>');
-  res.json(JSON.stringify({ status: 204, message: 'Received DELETE req' }));
+  // TODO: Pass in a variable for phone number not hard coded
+  res.json(await deleteUser('1231231234'));
 });
 
 export default router;
