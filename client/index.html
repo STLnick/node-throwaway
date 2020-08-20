@@ -16,30 +16,39 @@
 </head>
 
 <body>
-  <div class="container">
-    <form>
-      <div>
-        <label class="screen-reader-text" for="name">Name</label>
-        <input type="text" placeholder="Ur Name" id="name" data-form="name">
-      </div>
+  <div class="forms-wrapper">
+    <div class="container">
+      <form class="add-form">
+        <div>
+          <label class="screen-reader-text" for="name">Name</label>
+          <input type="text" placeholder="Your Name" id="name" data-form="name">
+        </div>
 
-      <div>
-        <label class="screen-reader-text" for="email">✉️</label>
-        <input type="email" placeholder="✉️" id="email" data-form="email">
-      </div>
+        <div>
+          <label class="screen-reader-text" for="email">✉️</label>
+          <input type="email" placeholder="Email" id="email" data-form="email">
+        </div>
 
-      <div>
-        <label class="screen-reader-text" for="fone">☎️</label>
-        <input type="tel" id="fone" placeholder="☎️" data-form="fone">
-      </div>
+        <div>
+          <label class="screen-reader-text" for="fone">☎️</label>
+          <input type="tel" id="fone" placeholder="123-123-1234" data-form="fone">
+        </div>
 
-      <div>
-        <label class="screen-reader-text" for="msg">Ur Message</label>
-        <textarea id="msg" placeholder="💬" data-form="msg"></textarea>
-      </div>
+        <div>
+          <label class="screen-reader-text" for="msg">Ur Message</label>
+          <textarea id="msg" placeholder="Message..." data-form="msg"></textarea>
+        </div>
 
-      <button type="submit">Submit</button>
-    </form>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+    <div class="container">
+      <form class="delete-form">
+        <label for="phone">Enter Phone # of User to Delete</label>
+        <input id="phone" type="text" placeholder="123-123-1234">
+        <button type="submit">Delete User</button>
+      </form>
+    </div>
   </div>
 
   <!-- 'Connect' JS to this HTML file. -->
