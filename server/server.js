@@ -13,4 +13,6 @@ const port = 5000;
 
 app.use('/users', users);
 
-app.listen(port);
+app.listen(port, () => {
+  console.log('Server is listening!');
+});
