@@ -42,11 +42,26 @@
         <button type="submit">Submit</button>
       </form>
     </div>
+
     <div class="container">
       <form class="delete-form">
         <label for="phone">Enter Phone # of User to Delete</label>
         <input id="phone" type="text" placeholder="123-123-1234">
         <button type="submit">Delete User</button>
+      </form>
+    </div>
+
+    <div class="container">
+      <form class="update-form">
+        <label for="phoneToUpdate">Enter Phone # of User to Update</label>
+        <input id="phoneToUpdate" required data-update="phone" type="tel" placeholder="123-123-1234">
+        <label class="screen-reader-text" for="nameToUpdate">Name</label>
+        <input id="nameToUpdate" placeholder="Name" data-update="name" type="text">
+        <label class="screen-reader-text" for="emailToUpdate">Email</label>
+        <input id="emailToUpdate" placeholder="username@mail.com" data-update="email" type="email">
+        <label class="screen-reader-text" for="messageToUpdate">Message</label>
+        <textarea id="messageToUpdate" placeholder="Message..." data-update="message"></textarea>
+        <button type="submit">Update User</button>
       </form>
     </div>
   </div>
