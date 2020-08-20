@@ -18,6 +18,15 @@ const deleteUser = async (phoneNum) => {
   })
 }
 
+const findUser = async (phoneNum) => {
+  const res = await fetch(`http://localhost:5000/users/${phoneNum}`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  })
+}
+
 const updateUser = async (updateObj) => {
   const res = await fetch('http://localhost:5000/users/update', {
     method: 'PATCH',

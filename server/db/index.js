@@ -21,8 +21,9 @@ export const deleteUser = async ({ userPhone }) => {
 };
 
 // GOOD
+export const getUser = async (userPhone) => {
   try {
-    return await client.db('throwaway').collection('users').findOne();
+    return await client.db('throwaway').collection('users').findOne({ fone: userPhone });
   } catch (err) {
     throw new Error(err);
   }
@@ -36,18 +37,18 @@ export const getAllUsers = async () => {
   }
 };
 
-export const updateUser = async ({
-  emailToUpdate, messageToUpdate, nameToUpdate, phoneToUpdate,
-}) => {
-  try {
-    return await client
-      .db('throwaway')
-      .collection('users')
-      .findOneAndUpdate(
-        { fone: phoneToUpdate },
-        { $set { name: nameToUpdate, email: emailToUpdate, msg: messageToUpdate } },
-      );
-  } catch (err) {
-  throw new Error(err);
-}
-};
+// export const updateUser = async ({
+//   emailToUpdate, messageToUpdate, nameToUpdate, phoneToUpdate,
+// }) => {
+//   try {
+//     return await client
+//       .db('throwaway')
+//       .collection('users')
+//       .findOneAndUpdate(
+//         { fone: phoneToUpdate },
+//         { $set { name: nameToUpdate, email: emailToUpdate, msg: messageToUpdate } },
+//       );
+//   } catch (err) {
+//   throw new Error(err);
+// }
+// };
