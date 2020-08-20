@@ -1,5 +1,6 @@
 import client from './client';
 
+// GOOD
 export const addNewUser = async (newUser) => {
   try {
     return await client.db('throwaway').collection('users').insertOne(newUser);
@@ -8,6 +9,7 @@ export const addNewUser = async (newUser) => {
   }
 };
 
+// GOOD
 export const deleteUser = async ({ userPhone }) => {
   try {
     // Created object and destructured on receipt - then set it's value as the
@@ -18,7 +20,7 @@ export const deleteUser = async ({ userPhone }) => {
   }
 };
 
-export const getUser = async () => {
+// GOOD
   try {
     return await client.db('throwaway').collection('users').findOne();
   } catch (err) {
