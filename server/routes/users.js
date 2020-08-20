@@ -10,6 +10,11 @@ router.get('/', async (_, res) => {
   res.send(await getAllUsers());
 });
 
+router.get('/:phoneNum', async (req, res) => {
+  res.status(200);
+  res.json(await getUser(req.params.phoneNum));
+});
+
 router.post('/add', async (req, res) => {
   res.status(201);
   res.json(await addNewUser(req.body));
