@@ -15,10 +15,9 @@ router.post('/add', async (req, res) => {
   res.json(await addNewUser(req.body));
 });
 
-// TODO: Pass in correct parameter for updateUser
 router.put('/update', async (req, res) => {
   res.status(204);
-  res.json(await updateUser());
+  res.json(await updateUser(req.body));
 });
 
 router.delete('/delete', async (req, res) => {
