@@ -8,7 +8,7 @@ export const addNewUser = async (newUser) => {
   }
 };
 
-export const deleteUser = async (userPhone) => {
+export const deleteUser = async ({ userPhone }) => {
   try {
     return await client.db('throwaway').collection('users').findOneAndDelete({ fone: userPhone });
   } catch (err) {

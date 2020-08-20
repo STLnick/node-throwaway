@@ -23,8 +23,7 @@ router.put('/update', async (req, res) => {
 
 router.delete('/delete', async (req, res) => {
   res.status(204);
-  // TODO: Pass in a variable for phone number not hard coded
-  res.json(await deleteUser('1231231234'));
+  res.json(await deleteUser(req.body));
 });
 
 export default router;

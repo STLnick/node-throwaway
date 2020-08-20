@@ -8,12 +8,18 @@ const postDeets = async (deets) => {
   })
 }
 
-document.querySelector("form").addEventListener("submit", () => {
-  event.preventDefault();
+const deleteUser = async (phoneNum) => {
+  const res = await fetch('http://localhost:5000/users/delete', {
+    method: 'DELETE',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ userPhone: phoneNum })
+  })
+}
 
-  // const test = Array.from(event.target.elements).map(el => {
-  //   console.log(el.dataset.form)
-  // })
+document.querySelector(".add-form").addEventListener("submit", (e) => {
+  e.preventDefault();
 
   postDeets(Array.from(event.target.elements)
     .filter(({ dataset }) => dataset.form)
@@ -23,3 +29,9 @@ document.querySelector("form").addEventListener("submit", () => {
     }, {}));
 
 });
+
+document.querySelector('.delete-form').addEventListener('submit', (e) => {
+  e.preventDefault()
+
+  deleteUser(e.target.querySelector('input').value.trim())
+})
