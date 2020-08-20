@@ -51,7 +51,13 @@ document.querySelector('.add-form').addEventListener('submit', (e) => {
 document.querySelector('.delete-form').addEventListener('submit', (e) => {
   e.preventDefault()
 
-  deleteUser(e.target.querySelector('input').value.trim())
+  deleteUser(e.target.querySelector('#phoneToDelete').value.trim())
+})
+
+document.querySelector('.find-form').addEventListener('submit', (e) => {
+  e.preventDefault()
+
+  findUser(e.target.querySelector('#phoneToFind').value.trim())
 })
 
 document.querySelector('.update-form').addEventListener('submit', (e) => {
